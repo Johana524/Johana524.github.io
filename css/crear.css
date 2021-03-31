@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* activeCrear main */
+
+main.activeCrear .container-uno {
+    display: none;
+}
+
+
+/* crear */
+
+.container-crear {
+    width: 100%;
+    display: none;
+    margin: 3% 3% 0;
+}
+
+.crear-principal {
+    display: flex;
+    width: 100%;
+}
+
+.cam-dark-theme {
+    display: none;
+}
+
+.peli-dark-theme {
+    display: none;
+}
+
+.box-crear {
+    position: relative;
+    width: 70%;
+    height: 390px;
+    border: 1px solid #572EE5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.square {
+    position: absolute;
+    border: 1px solid #50E3C2;
+    width: 27px;
+    height: 25px;
+}
+
+
+/* Visagras */
+
+.suno {
+    top: 20px;
+    left: 20px;
+    border-right: white;
+    border-bottom: white;
+}
+
+.sdos {
+    top: 20px;
+    right: 20px;
+    border-left: white;
+    border-bottom: white;
+}
+
+.stres {
+    bottom: 20px;
+    left: 20px;
+    border-top: white;
+    border-right: white;
+}
+
+.scuatro {
+    bottom: 20px;
+    right: 20px;
+    border-top: white;
+    border-left: white;
+}
+
+.texto-crear,
+.texto-crear-pasouno {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+
+.texto-crear-pasouno {
+    display: none;
+}
+
+.texto-crear h2,
+.texto-crear-pasouno h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #572EE5;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.texto-crear h2 span {
+    color: #5ED7C6;
+}
+
+.texto-crear,
+.texto-crear-pasouno,
+h3,
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 29px;
+}
+
+.container-video {
+    width: 50%;
+    height: 85%;
+    position: relative;
+}
+
+.upload-overlay,
+.upload-overlay-ok {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: all .5s ease;
+    opacity: 0;
+    background: #562ee5a8;
+}
+
+.upload-overlay h3,
+.upload-overlay-ok h3 {
+    color: white;
+    font-size: 15px;
+    line-height: 19px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 5%;
+}
+
+.iconos-upload-overlay-ok {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.iconos-upload-overlay-ok img {
+    margin: 5px;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+}
+
+.crear-secundario {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3%;
+}
+
+.buttons-crear button {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    border: 1px solid #572EE5;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    color: #572EE5;
+    outline: unset;
+}
+
+.timer,
+.repetir-captura {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+    position: absolute;
+    right: 15%;
+    top: 8%;
+    color: #572EE5;
+    display: none;
+    cursor: pointer;
+}
+
+.buttons-crear button:hover,
+.buttons-start-stop button:hover {
+    background-color: #572EE5;
+    color: white;
+    cursor: pointer;
+}
+
+.crear-secundario hr {
+    width: 80%;
+    height: 6.9px;
+    background-color: #572EE5;
+    border-radius: 40px;
+    text-decoration: none;
+    margin: 3% 0;
+}
+
+.accion-buttons {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    outline: unset;
+    text-decoration: none;
+    border: 1px solid #572EE5;
+    border-radius: 40px;
+    padding: 20px;
+    color: #572EE5;
+}
+
+.crear-secundario img {
+    position: absolute;
+    right: 0;
+    top: -50%;
+}
+
+
+/* CREAR PASO UNO*/
+
+.container-crear.comenzar .texto-crear,
+.container-crear.comenzar .accion-buttons {
+    display: none;
+}
+
+.container-crear.comenzar .texto-crear-pasouno {
+    display: block;
+}
+
+.container-crear.comenzar .button-uno {
+    background-color: #572EE5;
+    color: white;
+}
+
+
+/* CREAR PASO DOS */
+
+.container-crear.pasodos .texto-crear,
+.container-crear.pasodos .texto-crear-pasouno {
+    display: none;
+}
+
+.container-crear.pasodos video,
+.container-crear.pasodos .timer,
+.container-crear.pasodos .accion-buttons {
+    display: block;
+}
+
+.container-crear.pasodos .button-dos {
+    background-color: #572EE5;
+    color: white;
+}
+
+
+/* FINALIZAR */
+
+.container-crear.finalizar .timer {
+    display: none;
+}
+
+.container-crear.finalizar .repetir-captura {
+    display: block;
+}
+
+
+/* SUBIR GIFO OVERLAY */
+
+.container-crear.subir .button-tres {
+    background-color: #572EE5;
+    color: white;
+}
+
+.container-crear.subir .texto-crear,
+.container-crear.subir .texto-crear-pasouno {
+    display: none;
+}
+
+.box-crear.uploadOverlayActive .upload-overlay {
+    opacity: 1;
+}
+
+.box-crear.uploadOverlayOk .upload-overlay {
+    display: none;
+}
+
+.box-crear.uploadOverlayOk .upload-overlay-ok {
+    opacity: 1;
+}
+
+
+/* activeCrear main */
+
+main.activeCrear .container-uno {
+    display: none;
+}
+
+main.activeCrear .gifos-recomendados {
+    display: none;
+}
+
+main.activeCrear .container-crear {
+    display: flex;
+    flex-direction: column;
+}

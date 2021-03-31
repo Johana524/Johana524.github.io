@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale=1.0>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/darktheme.css">
+    <link rel="stylesheet" href="css/maxgifs.css">
+    <link rel="stylesheet" href="css/stylepages.css">
+    <link rel="stylesheet" href="css/crear.css">
+    <title> Gifos </title>
+</head>
+
+<body>
+    <header>
+        <!-- MENU -->
+        <nav class="contenedor">
+            <a href="index.html">
+                <div class="logo">
+                    <img id="imgLogo" class="logo-light-theme" src="imagenes/menu/logo-mobile.svg" alt="logo">
+                    <img id="imgLogo" class="logo-dark-theme" src="imagenes/menu/logo-mobile-modo-noct.svg" alt="logo">
+                </div>
+            </a>
+            <div id="enlaces" class="enlaces">
+                <a id="btnModoNoc" href="#modonocturno">Modo Nocturno</a>
+                <hr>
+                <a id="btnFavs" href="#favoritos">Favoritos</a>
+                <hr>
+                <a id="btnMisGifos" href="#misgifos">Mis GIFOS</a>
+                <hr>
+                <a class="btn-crear" id="btnCrear" href="#crear">
+                    <img id="crearGifo" class="crear" src="imagenes/menu/button-crear-gifo.svg">
+                    <img id="crearGifo" class="crear-dark-theme" src="imagenes/menu/CTA-crar-gifo-modo-noc.svg">
+
+                </a>
+            </div>
+            <div class="hamburguesa" id="burgerContainer">
+                <img id="hamburguesa1" src="imagenes/menu/burger.svg">
+                <img id="hamburguesa1" class="hamb-dark-theme" src="imagenes/menu/burger-modo-noct.svg">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SEARCH -->
+        <div class="container-uno">
+            <h1 class="titulosh1">Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span></h1>
+            <form class="main-form" id="mainForm">
+                <img class="ilustra" src="imagenes/menu/ilustra_header.svg">
+                <div class="search-box" id="searchBox">
+                    <input name="igifs" id="searchInput" class="search-txt" type="text" placeholder="Busca GIFOS y más" value="">
+
+                    <input type="image" id="btnSearch" class="search-btn sbtn" src="imagenes/icon-search.svg" />
+                    <input type="image" id="btnSearchDark" class="sbtn-dark-theme sbtn" src="imagenes/icon-search-mod-noc.svg" />
+                    <img id="btnClose" class="close-btn" src="imagenes/menu/close.svg">
+
+                </div>
+                <div class="select-container" id="selectContainer">
+                    <!-- SELECT VALUES -->
+                </div>
+            </form>
+
+            <h4 class="titulosh4">Trending: </h4>
+            <p class="parrafo">Reactions, Entertainment, Sports, Stickers, Artists</p>
+            <hr>
+            <div id="containerResultado" class="container-resultado-search click-on-gif">
+
+                <h3 class="search-name" id="searchName"></h3>
+                <div id="containerGifs" class="container-gifs"></div>
+
+                <button role="button" class="btn-vermas" id="btnVerMas"> VER MÁS</button>
+
+                <div id="sinResultsContainer" class="sin-results-container">
+                    <img class="results-err-img" src="imagenes/icon-busqueda-sin-resultado.svg">
+                    <p>Intenta con otra busqueda</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CREAR -->
+        <div class="container-crear">
+            <div class="crear-principal">
+
+                <img class="cam-light-theme" src="imagenes/crear/camara.svg" alt="camara">
+                <img class="cam-dark-theme" src="imagenes/crear/camara-modo-noc.svg" alt="camara">
+                <img src="imagenes/crear/element-luz-camara.svg" alt="camaraluz">
+                <div class="box-crear">
+                    <div class="square suno"></div>
+                    <div class="square sdos"></div>
+                    <div class="square stres"></div>
+                    <div class="square scuatro"></div>
+
+                    <div class="texto-crear">
+                        <h2>Aquí podrás <br>crear tus propios <span>GIFOS</span></h2>
+                        <h3>¡Crea tu GIFO en un sólo 3 pasos!</h3>
+                        <p>(sólo necesitas una camara para grabar un video)</p>
+                    </div>
+
+                    <div class="texto-crear-pasouno">
+                        <h2>¿Nos das acceso a tu cámara?</h2>
+                        <h3>El acceso a tu cámara será válido sólo por el tiempo en el que estés creando el GIFO.</h3>
+                    </div>
+
+                    <div class="container-video click-on-gif">
+                        <video id="video" class="video" autoplay>Videoooo</video>
+                        <div id="uploadOverlay" class="upload-overlay overlayFade" id="${id}">
+                            <img class="imgLoader" src="imagenes/loader.svg">
+                            <h3>Estamos subiendo tu GIFO</h3>
+                        </div>
+                        <div id="uploadOverlayOk" class="upload-overlay-ok overlayFade">
+                            <div class="iconos-upload-overlay-ok">
+                                <img class="iconos icon-download" id="iconDownload" src="imagenes/slider/icon-download.svg">
+                                <img class="iconos icon-link" id="iconLink" src="imagenes/icon-link-normal.svg">
+                            </div>
+                            <img class="imgOk" src="imagenes/ok.svg">
+                            <h3>GIFO subido con éxito</h3>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="crear-secundario">
+                <div id="buttonsCrear" class="buttons-crear">
+                    <button class="button-uno">1</button>
+                    <button class="button-dos">2</button>
+                    <button class="button-tres">3</button>
+
+                </div>
+                <div>
+                    <p class="timer" id="timer">
+                        <span id="horas">00</span>:<span id="minutos">00</span>:<span id="segundos">00</span>
+                    </p>
+                    <p class="repetir-captura" id="repetirCaptura">REPETIR CAPTURA</p>
+                </div>
+
+
+                <hr>
+                <div id="buttonsStartStop" class="buttons-start-stop">
+
+                    <button class="accion-buttons">COMENZAR</button>
+
+                </div>
+                <img class="peli-light-theme" src="imagenes/crear/pelicula.svg" alt="">
+                <img class="peli-dark-theme" src="imagenes/crear/pelicula-modo-noc.svg" alt="">
+            </div>
+        </div>
+
+        <!-- FAVORITOS -->
+        <div id="containerFavs" class="container-favs click-on-gif">
+
+            <div id="headerFavs" class="header-favs">
+                <img src="imagenes/icon-favoritos.svg">
+                <h1>Favoritos</h1>
+            </div>
+            <div id="headerFavsEmpty" class="header-favs-empty">
+                <img src="imagenes/icon-fav-sin-contenido.svg">
+                <p>"¡Guarda tu primer GIFO en Favoritos para que se muestre aquí!"</p>
+            </div>
+            <div class="mini-container-favs" id="miniContainerFavs">
+                <!-- fragment carrito favoritos -->
+            </div>
+            <div class="btn-paginacion" id="btnPaginacion">
+                <button role="button" class="btn-anterior" id="btnVerMenosFav"> ANTERIOR</button>
+                <button role="button" class="btn-siguiente" id="btnVerMasFav"> SIGUIENTE </button>
+            </div>
+
+        </div>
+
+        <!-- MIS GIFOS -->
+        <div id="containerMisGifos" class="container-misgifos click-on-gif">
+
+            <div class="header-misgifos">
+                <img src="imagenes/icon-mis-gifos.svg">
+                <h1>Mis Gifos</h1>
+            </div>
+            <!-- <div id="headerMisgifosEmpty"></div> -->
+            <div class="mini-container-misgifos" id="miniContainerMisGifos">
+                <!-- Mis gifos -->
+            </div>
+
+            <button role="button" class="btn-vermas" id="btnVerMas"> VER MÁS</button>
+
+        </div>
+
+        <!-- TRENDINGS -->
+        <div class="gifos-recomendados container">
+
+            <div class="container-titulo-controles">
+                <h3 class="titulos">Trending GIFOS</h3>
+                <p class="parrafo">Mira los ultimos GIFOS de nuestra comunidad.</p>
+            </div>
+
+            <div class="container-principal">
+
+                <button role="button" id="flechaIzquierda" class="flechas flecha-izquierda">
+                    <img src="imagenes/slider/button-slider-left.svg"
+                        onmouseover="this.src ='imagenes/slider/button-slider-left-hover.svg'"
+                        onmouseout="this.src ='imagenes/slider/button-slider-left.svg'">
+                    <img class="fi-dark-theme" src="imagenes/slider/button-slider-left-md-noct.svg">
+                </button>
+
+                <div class="container-carousel">
+
+                    <div class="carousel click-on-gif"></div>
+
+                </div>
+
+                <button role="button" id="flechaDerecha" class="flechas flecha-derecha">
+                    <img src="imagenes/slider/Button-Slider-right.svg"
+                        onmouseover="this.src ='imagenes/slider/Button-Slider-right-hover.svg'"
+                        onmouseout="this.src ='imagenes/slider/Button-Slider-right.svg'">
+                    <img class="fd-dark-theme" src="imagenes/slider/Button-slider-right-md-noct.svg">
+                </button>
+
+            </div>
+
+        </div>
+        <div class="maxDiv click-on-gif"></div>
+
+    </main>
+
+    <footer>
+
+        <div>
+            <h5 class="titulos">Compartir en:</h5>
+            <div class="icon-light-theme">
+                <img src="imagenes/footer/icon_facebook.svg" alt="Facebook">
+                <img src="imagenes/footer/icon-tw-normal.svg" alt="Twiter">
+                <img src="imagenes/footer/icon_instagram.svg" alt="Instagram">
+            </div>
+            <div class="icon-dark-theme">
+                <img src="imagenes/footer/icon_facebook_noc.svg" alt="Facebook">
+                <img src="imagenes/footer/icon_twitter_noc.svg" alt="Twiter">
+                <img src="imagenes/footer/icon_instagram_noc.svg" alt="Instagram">
+            </div>
+
+        </div>
+        <p class="parrafo">GIFOS 2020 All Rights Reserved</p>
+    </footer>
+
+    <!-- TEMPLATES -->
+    <template id="templateFavs">
+        <div class="favs" id="idFavs">
+            <img class="imgResultado" src="" id="">
+            <div class="overlay overlayFade" id="">
+                 <div class="textOverlay text">
+                            <h3>userName</h3>
+                            <h1>title</h1>
+                 </div>
+                 <div class="iconos-overlay" id="iconosOverlay">
+
+                   <img class="iconos icon-download" id="iconDownload" src="imagenes/slider/icon-download.svg">
+      
+                   <img class="iconos icon-fav icon-fav-active" id="" src="imagenes/slider/icon-fav-active.svg">
+            
+                   <img class="iconos icon-max" id="iconMax" src="imagenes/slider/icon-max.svg">
+             
+                 </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="templateMaxGifs">
+
+        <div class="container-overlay-modal" id="containerOverlayModal">
+            <div class="poput-modal" id="poputModal">
+                
+                    <img class="close-modal" id="" src="imagenes/menu/close.svg">
+                    <img class="img-maxgif imgResultado" src="" id="">
+                    <div class="overlay-modal" id="">
+                        <div class="textOverlayModal text">
+                            <h3>userName</h3>
+                            <h1>title</h1>
+                        </div>
+                        <div class="iconos-overlay-modal" id="iconosOverlay">
+    
+                            <img class="iconos icon-download" id="iconDownload" src="imagenes/slider/icon-download.svg">
+    
+                            <img class="iconos icon-fav" id="" src="imagenes/slider/icon-fav.svg">
+    
+                            <img class="iconos icon-max" id="" src="imagenes/slider/icon-max.svg">
+    
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </template>
+
+    <template id="templateMisgifos">
+        <div class="mis-gifos" id="idFavs">
+            <img class="imgResultado" src="" id="">
+            <div class="overlay overlayFade" id="">
+                 <div class="textOverlay text">
+                            <h3>userName</h3>
+                            <h1>title</h1>
+                 </div>
+                 <div class="iconos-overlay" id="iconosOverlay">
+
+                    <img class="iconos icon-trash" id="iconTrash" src="imagenes/icon-trash-normal.svg">
+      
+                   <img class="iconos icon-fav" id="" src="imagenes/slider/icon-fav-active.svg">
+            
+                   <img class="iconos icon-max" id="iconMax" src="imagenes/slider/icon-max.svg">
+             
+                 </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="alljavascript/trendings.js"></script>
+    <script src="alljavascript/menu.js"></script>
+    <script src="alljavascript/search.js"></script>
+    <script src="alljavascript/overlay.js"></script>
+    <script src="alljavascript/crear.js"></script>
+    <!-- Record -->
+    <script src="https://cdn.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/gif-recorder.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+
+</body>
+
+</html>

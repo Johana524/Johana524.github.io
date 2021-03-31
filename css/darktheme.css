@@ -1,0 +1,152 @@
+/*JS-ModoNocturno*/
+
+
+/*cuando el body tenga la clase dark...*/
+
+body.dark {
+    background: #37383C;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+}
+
+body.dark nav a {
+    color: #FFFFFF;
+}
+
+body.dark .enlaces {
+    background-color: #000000;
+}
+
+body.dark .search-txt {
+    background: #37383C;
+    border: 1px solid white;
+}
+
+body.dark .select-container {
+    border: 1px solid white;
+}
+
+body.dark .search-btn {
+    display: none;
+}
+
+body.dark .sbtn-dark-theme {
+    display: inline;
+    /* left: 5%; search activo*/
+}
+
+body.dark .container {
+    background-color: #222326;
+}
+
+
+/* body.dark .fd-dark-theme {
+    display: inline;
+} */
+
+body.dark .fd-dark-theme,
+body.dark .fi-dark-theme {
+    display: inline;
+    background-color: #222326;
+}
+
+body.dark .fd-dark-theme:hover,
+body.dark .fi-dark-theme:hover {
+    background-color: white;
+    color: #222326;
+}
+
+body.dark .titulos {
+    color: #FFFFFF;
+}
+
+body.dark .parrafo {
+    color: #FFFFFF;
+}
+
+body.dark .logo-dark-theme {
+    display: inline;
+}
+
+body.dark .icon-light-theme {
+    display: none;
+}
+
+body.dark .icon-dark-theme {
+    display: inline;
+}
+
+body.dark .btn-vermas,
+body.dark .btn-anterior,
+body.dark .btn-siguiente {
+    border: 1px solid white;
+    border-radius: 25px;
+    background-color: #37383C;
+    color: white;
+}
+
+body.dark .btn-anterior:hover,
+body.dark .btn-siguiente:hover,
+body.dark .btn-vermas:hover {
+    background-color: white;
+    color: black;
+}
+
+body.dark .search-txt {
+    color: white;
+}
+
+body.dark .crear {
+    display: none;
+}
+
+body.dark .crear-dark-theme {
+    display: inline-block;
+}
+
+
+/* CREAR DARK */
+
+body.dark .cam-dark-theme {
+    display: inline;
+}
+
+body.dark .cam-light-theme {
+    display: none;
+}
+
+body.dark .peli-dark-theme {
+    display: inline;
+}
+
+body.dark .peli-light-theme {
+    display: none;
+}
+
+body.dark .buttons-crear button,
+body.dark .buttons-start-stop button {
+    background-color: #37383C;
+    color: white;
+    border: 1px solid white;
+}
+
+body.dark .buttons-crear button:hover,
+body.dark .buttons-start-stop button:hover {
+    background-color: white;
+    color: #37383C;
+    border: 1px solid #37383C;
+}
+
+
+/* FAVS-MISGIFOS */
+
+body.dark .container-favs,
+body.dark .container-misgifos {
+    background-color: #37383C;
+}
+
+@media screen and (min-width: 376px) {
+    body.dark .enlaces {
+        background-color: #37383C;
+    }
+}

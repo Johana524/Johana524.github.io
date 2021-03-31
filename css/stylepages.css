@@ -1,0 +1,133 @@
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+    .container-favs,
+    .container-misgifos {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        display: none;
+        margin-bottom: 50%;
+    }
+    
+    .header-favs,
+    .header-favs-empty,
+    .header-misgifos {
+        padding: 15% 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header-favs h1,
+    .header-misgifos h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 25px;
+        line-height: 30px;
+        padding: 5% 0 10%;
+        color: #572EE5;
+    }
+    
+    .header-favs p,
+    .header-favs-empty p,
+    .header-misgifos p {
+        width: 80%;
+        text-align: center;
+        color: #50E3C2;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    .mini-container-favs,
+    .mini-container-misgifos {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(120px, auto);
+        grid-gap: 20px;
+    }
+    
+    .favs,
+    .mis-gifos {
+        position: relative;
+    }
+    
+    .icon-fav-active,
+    .icon-fav-selected {
+        width: 32px;
+        height: 32px;
+        padding: 8px;
+        background-color: white;
+    }
+    
+    .icon-fav-selected {
+        display: none;
+    }
+    
+    .icon-fav-selected.active {
+        display: block;
+    }
+    
+    .header-misgifos-empty {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        margin: 15%;
+    }
+    
+    .header-misgifos-empty img {
+        width: 50%;
+    }
+    
+    .no-result-text {
+        margin: 5%;
+        font-family: 'Montserrat', sans-serif;
+        color: #50E3C2;
+    }
+    /* activeFavs main */
+    
+    main.activeFavs .container-uno {
+        display: none;
+    }
+    
+    main.activeFavs .container-favs {
+        display: flex;
+    }
+    /* activeMisgifos main */
+    
+    main.activeMisGifos .container-uno {
+        display: none;
+    }
+    
+    main.activeMisGifos .container-misgifos {
+        display: flex;
+    }
+    
+    @media screen and (min-width: 376px) {
+        .container-favs,
+        .container-misgifos {
+            margin-bottom: 10%;
+        }
+        .header-favs,
+        .header-misgifos {
+            padding: 5% 0 0;
+        }
+        .mini-container-favs,
+        .mini-container-misgifos {
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(200px, auto);
+            grid-gap: 29px;
+        }
+        .headers-favs h1 {
+            font-size: 25px;
+        }
+        .header-misgifos-empty {
+            margin: 5%;
+        }
+        .header-misgifos-empty img {
+            width: 20%;
+        }
+    }
